@@ -43,6 +43,15 @@ export default function LoginPage({
       style={{ backgroundImage: "url('/images/background2.jpg')" }}
     >
       <div className="bg-white/30 backdrop-blur-md p-10 rounded-xl shadow-xl max-w-sm w-full">
+        <div className="flex justify-center mb-6">
+          <div className="flex flex-col items-center">
+            <img
+              src="/ignot-logo.png"
+              alt="Ignite Logo"
+              className="h-16 w-auto"
+            />
+          </div>
+        </div>
         <h2 className="text-3xl font-bold mb-6 text-center text-gray-900">
           Admin Login
         </h2>
@@ -77,7 +86,10 @@ export default function LoginPage({
         </form>
 
         <p className="text-sm text-gray-700 mt-4 text-center">
-          Forgot your password? <a href="#" className="text-indigo-600 hover:underline">Reset</a>
+          Forgot your password?{" "}
+          <a href="#" className="text-indigo-600 hover:underline">
+            Reset
+          </a>
         </p>
       </div>
     </div>
