@@ -53,10 +53,11 @@ export const Sidebar: React.FC = () => {
     if (pathname.startsWith("/leads")) return "leads";
     if (pathname.startsWith("/clients")) return "clients";
     if (pathname.startsWith("/maldo")) return "maldo";
-     if (pathname.startsWith("/services")) return "services";
+    if (pathname.startsWith("/services")) return "services";
     if (pathname.startsWith("/saas-products")) return "saas-products";
     if (pathname.startsWith("/projects")) return "projects";
     if (pathname.startsWith("/blogs")) return "blogs";
+    if (pathname.startsWith("/testimonials")) return "testimonials";
     if (pathname.startsWith("/website-images")) return "website-images";
     if (pathname.startsWith("/site-settings")) return "site-settings";
     return "";
@@ -69,7 +70,7 @@ export const Sidebar: React.FC = () => {
       icon: <QuestionCircleOutlined />,
       label: <Link href="/enqueries">Enquiries</Link>,
     },
-     {
+    {
       key: "services",
       icon: <CustomerServiceOutlined />,
       label: <Link href="/services">Services</Link>,
@@ -108,6 +109,11 @@ export const Sidebar: React.FC = () => {
       key: "website-images",
       icon: <CameraOutlined />,
       label: <Link href="/website-images">Website Images</Link>,
+    },
+    {
+      key: "testimonials",
+      icon: <CameraOutlined />,
+      label: <Link href="/testimonials">Testimonials</Link>,
     },
     {
       key: "site-settings",

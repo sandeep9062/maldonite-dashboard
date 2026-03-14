@@ -20,7 +20,6 @@ import {
   useCreateSiteSettingsMutation,
   useUpdateSiteSettingsMutation,
 } from "@/services/siteSettingsApi";
-import TestimonialsPage from "../testimonials/page";
 
 interface SiteSettingsFormValues {
   websiteName: string;
@@ -97,8 +96,6 @@ const SiteSettingsPage = () => {
 
   return (
     <>
-      {" "}
-      <TestimonialsPage />
       <Card
         title="Website Site Settings"
         style={{
@@ -167,6 +164,16 @@ const SiteSettingsPage = () => {
                   rules={[{ required: true }]}
                 >
                   <Input placeholder="https://maps.google.com/?q=123+Digital+Blvd" />
+                </Form.Item>
+              </Col>
+
+              <Col xs={24} md={12}>
+                <Form.Item
+                  label="Google Map Embedded URL"
+                  name="googleMapImbededUrl"
+                  rules={[{ required: true }]}
+                >
+                  <Input placeholder="https://www.google.com/maps/embed?pb=..." />
                 </Form.Item>
               </Col>
             </Row>
