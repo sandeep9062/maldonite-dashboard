@@ -59,6 +59,7 @@ export const Sidebar: React.FC = () => {
     if (pathname.startsWith("/blogs")) return "blogs";
     if (pathname.startsWith("/testimonials")) return "testimonials";
     if (pathname.startsWith("/website-images")) return "website-images";
+    if (pathname.startsWith("/careers")) return "careers";
     if (pathname.startsWith("/site-settings")) return "site-settings";
     return "";
   };
@@ -104,6 +105,11 @@ export const Sidebar: React.FC = () => {
       key: "blogs",
       icon: <BookOutlined />,
       label: <Link href="/blogs">Blogs</Link>,
+    },
+    {
+      key: "careers",
+      icon: <RocketOutlined />,
+      label: <Link href="/careers">Careers</Link>,
     },
     {
       key: "website-images",

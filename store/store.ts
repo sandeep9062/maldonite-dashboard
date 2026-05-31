@@ -11,12 +11,9 @@ import { clientApi } from "@/services/clientApi";
 import { productsApi } from "./../services/productsApi";
 import { testimonialsApi } from "@/services/testimonialsApi";
 import { servicesApi } from "@/services/servicesApi";
-import {leadApi} from "@/services/leadApi";
+import { leadApi } from "@/services/leadApi";
 import { authApi } from "@/services/authApi";
-
-
-
-
+import { careerApi } from "@/services/careerApi";
 
 const store = configureStore({
   reducer: {
@@ -32,10 +29,7 @@ const store = configureStore({
     [servicesApi.reducerPath]: servicesApi.reducer,
     [leadApi.reducerPath]: leadApi.reducer,
     [authApi.reducerPath]: authApi.reducer,
-
-
-
-
+    [careerApi.reducerPath]: careerApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat([
@@ -51,6 +45,7 @@ const store = configureStore({
       servicesApi.middleware,
       leadApi.middleware,
       authApi.middleware,
+      careerApi.middleware,
     ]),
   devTools: process.env.NODE_ENV !== "production", // ✅ enable Redux DevTools in development
 });
